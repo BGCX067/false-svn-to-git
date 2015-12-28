@@ -1,0 +1,44 @@
+#labels Featured,Phase-Deploy
+To install SFC, grab the C files from the fixpoint subdirectory
+of the SVN tree and compile them with your favorite C compiler.
+
+If you are too lazy to learn SVN, the latest versions of the
+C source files are here:
+
+[http://false.googlecode.com/svn/trunk/fixpoint/0.c 0.c]
+[http://false.googlecode.com/svn/trunk/fixpoint/1.c 1.c]
+[http://false.googlecode.com/svn/trunk/fixpoint/2.c 2.c]
+[http://false.googlecode.com/svn/trunk/fixpoint/3.c 3.c]
+[http://false.googlecode.com/svn/trunk/fixpoint/4.c 4.c]
+[http://false.googlecode.com/svn/trunk/fixpoint/5.c 5.c]
+[http://false.googlecode.com/svn/trunk/fixpoint/6.c 6.c]
+[http://false.googlecode.com/svn/trunk/fixpoint/7.c 7.c]
+[http://false.googlecode.com/svn/trunk/fixpoint/c.c c.c]
+
+Here's how you can compile SFC on a unix box:
+
+{{{
+gcc -o sfc -Wall -O3 -DNDEBUG 0.c 1.c 2.c 3.c 4.c 5.c 6.c 7.c c.c
+}}}
+
+The rest is up to you - the compiler has no dependencies and can
+be run from any location.
+
+The documentation is not yet complete and might be slightly
+out-of-date, but here it is:
+
+[http://false.googlecode.com/svn/trunk/doc/toc.html Documentation]
+
+You may also learn some #F basics by looking at the examples:
+ 
+[http://false.googlecode.com/svn/trunk/examples/hello.sf hello.sf]
+[http://false.googlecode.com/svn/trunk/examples/tak.sf tak.sf]
+[http://false.googlecode.com/svn/trunk/examples/stak.sf stak.sf]
+[http://false.googlecode.com/svn/trunk/examples/rk.sf rk.sf]
+
+They can be compiled in the following manner:
+
+{{{
+./sfc tak.sf  # produces tak.c 
+gcc -o tak -Wall -O3 -DNDEBUG tak.c
+}}}
